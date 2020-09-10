@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung chuyen doi tien te</title>
+</head>
+<body>
+<form>
+    <table border="1" style="width: 1000px">
+        <tr align="center" >
+          <td><strong>Amount</strong></td>
+          <td><strong>From Currency</strong></td>
+          <td><strong>To Currency</strong></td>
+        </tr>
+        <tr align="center">
+            <td><input id="inputAmount"></td>
+            <td><select id="fCurrency">
+                <option value="23000">VND</option>
+                <option value="1">USD</option>
+                <option value="1200">WON</option>
+                <option value="100">JPY</option>
+            </select></td>
+
+            <td><select id="tCurrency">
+                <option value="1">USD</option>
+                <option value="23000">VND</option>
+                <option value="1200">WON</option>
+                <option value="100">JPY</option>
+            </select></td>
+        </tr>
+    </table>
+    <input type="button" onclick="Do()" value="Convert">
+    <p id="result"></p>
+</form>
+<script>
+    function Do(){
+
+        let amount = document.getElementById("inputAmount").value;
+        let f = document.getElementById("fCurrency").value;
+        let t = document.getElementById("tCurrency").value;
+
+        let r = amount * t / f;
+        document.getElementById("result").innerHTML = "Ket qua la: " + r;
+    }
+</script>
+</body>
+</html>
