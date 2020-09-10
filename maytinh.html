@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh don gian</title>
+</head>
+<body>
+<form>
+    <p><strong>Calculator</strong></p>
+    <input type="text" id="no1">
+    <input type="text" id="no2">
+    <br>
+    <br>
+    <input type="button" onclick="f1()" name="Addition(+)">Addition(+)
+    <input type="button" onclick="f2()" name="Subtraction(-)">Subtraction(-)
+    <input type="button" onclick="f3()" name="Multiplication(*)">Multiplication(*)
+    <input type="button" onclick="f4()" name="Division(/)">Division(/)
+    <p id="Result"></p>
+</form>
+<script>
+    function f1(){
+        let x = document.getElementById("no1").value;
+        let y = document.getElementById("no2").value;
+        let c = parseInt(x);
+        let d = parseInt(y);
+        let a = c+d;
+        document.getElementById("Result").innerHTML = "This is result: " + a;
+    }
+    function f2(){
+        let c = document.getElementById("no1").value;
+        let d = document.getElementById("no2").value;
+        let s = c - d;
+        document.getElementById("Result").innerHTML = "This is result: " + s;
+    }
+    function f3(){
+        let c = document.getElementById("no1").value;
+        let d = document.getElementById("no2").value;
+        let m = c * d;
+        document.getElementById("Result").innerHTML = "This is result: " + m;
+    }
+    function f4(){
+        let c = document.getElementById("no1").value;
+        let d = document.getElementById("no2").value;
+        let e = c/d;
+        document.getElementById("Result").innerHTML = "This is result: " + e;
+    }
+</script>
+
+</body>
+</html>
