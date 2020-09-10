@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap so 1</title>
+</head>
+<body>
+    <script>
+        // Khai bao bien trung gian
+    let physicalPoint;
+    let chemistryPoint;
+    let biologyPoint;
+    let avgPoint;
+    // Nhap tu ban phim
+    physicalPoint = prompt("Please input your Physical Points: ");
+    chemistryPoint = prompt("Please input your Chemistry Points also: ");
+    biologyPoint = prompt("Please input your Biology Points: ");
+    // Chuyen doi ve so nguyen
+    let p=parseInt(physicalPoint);
+    let c=parseInt(chemistryPoint);
+    let b=parseInt(biologyPoint);
+
+    avgPoint=(p+c+b)/3;
+    document.write("This is your average points: "+avgPoint);
+    </script>
+</body>
+</html>
